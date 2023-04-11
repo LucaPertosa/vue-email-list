@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue email list</title>
+
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ul v-if="isLoading">Attendere il caricamento della lista</ul>
+        <ul v-if="!isLoading">
+            <li v-for="item in emailList">
+                {{ item }}
+            </li>
+        </ul>
+    </div>
+    <!-- JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
